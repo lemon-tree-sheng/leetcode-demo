@@ -5,6 +5,9 @@ import (
 	"testing"
 )
 
+/**
+递归方式
+ */
 var res int
 
 func TestMaxProductV2(t *testing.T) {

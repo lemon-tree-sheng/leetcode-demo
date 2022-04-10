@@ -5,6 +5,9 @@ import (
 	"testing"
 )
 
+/**
+DP 方式
+ */
 func TestMaxProduct(t *testing.T) {
 	// nums := []int{2, 3, -2, 4}
 	nums := []int{2, 2, 2, 2}
