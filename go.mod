@@ -1,3 +1,3 @@
-module sheng.com/go-demo
+module sheng.com/leetcode-demo
 
 go 1.15
