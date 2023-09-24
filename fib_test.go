@@ -8,14 +8,16 @@ func fib(n int) int {
 		return n
 	}
 
-	dp := make([]int, n+1)
-	dp[0] = 0
-	dp[1] = 1
+	p := 0
+	q := 1
+	r := 0
 
 	for i := 2; i <= n; i++ {
-		dp[i] = (dp[i-1] + dp[i-2]) % 1000000007
+		r = (p + q) % 1000000007
+		p = q
+		q = r
 	}
-	return dp[n]
+	return r
 }
 
 func TestFib(t *testing.T) {
