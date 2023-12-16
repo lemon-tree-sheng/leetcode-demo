@@ -15,6 +15,7 @@ func addStrings(num1 string, num2 string) string {
 		tmp := 0
 		for i := 0; i <= len(sli1); i++ {
 			nn := numN(10, i) // 这里用了乘积的方式不是一个好的方式
+			// 使用每一位计算好结果之后，得到个位和进位的值即可
 			if i == 1 {
 				res += tmp
 			} else {
