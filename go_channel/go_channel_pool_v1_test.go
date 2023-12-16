@@ -1,4 +1,4 @@
-package leetcode_demo
+package go_channel
 
 import (
 	"sync"
@@ -21,6 +21,9 @@ func initPool() Pool {
 				if !ok {
 					go t()
 				}
+			case p.tasks <- nil:
+				close(p.tasks)
+
 			}
 		}
 	}()
