@@ -22,5 +22,20 @@ func reverseKGroup(head *Node, k int) *Node {
 }
 
 func reverseScope(left *Node, right *Node) *Node {
-	return nil
+	if left == nil || left.next == nil {
+		return left
+	}
+
+	var dummyNode *Node = nil
+	p := dummyNode
+	q := left
+
+	for q != right.next {
+		tmp := q.next
+		q.next = p
+		p = q
+		q = tmp
+	}
+
+	return p
 }
