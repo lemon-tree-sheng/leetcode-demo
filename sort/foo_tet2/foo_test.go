@@ -36,15 +36,13 @@ func TestFoo(t *testing.T) {
 }
 
 func TestBar(t *testing.T) {
-	nums := []int{1, 2, 3, 4, 5}
-	fmt.Println(nums[0:2])
+	arr := []int{1, 2, 3}
+	b := bar(arr)
+	fmt.Printf("%v\n", arr)
+	fmt.Printf("%v\n", b)
+}
 
-	left := 0
-	right := 1
-	nums[left], nums[right] = nums[right], nums[left]
-
-	fmt.Println(left)
-	fmt.Println(right)
-
-	fmt.Println(nums)
+func bar(a []int) []int {
+	a[0], a[1] = a[1], a[0]
+	return a
 }
